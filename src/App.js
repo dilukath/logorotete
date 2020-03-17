@@ -18,9 +18,14 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-  ...state
-});
+// const mapStateToProps = state => ({
+//   ...state
+// });
+const mapStateToProps = (state) => {
+    return {
+        rotating: state.rotating
+    };
+};
 
 const mapDispatchToProps = dispatch => ({
   startAction: () => dispatch(startAction),
